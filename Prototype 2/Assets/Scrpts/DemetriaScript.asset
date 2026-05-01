@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4a9269f7d5d5943b8eb28cf3b4ab77, type: 3}
+  m_Name: DemetriaScript
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Hi, I'm Demetria and i like you
+  - I love apple juice
+  - I HATE any pokemon
+  - So, do you think you will pick me? if so, shoot that ugly one
+  - OMG!! i knew you would pick me!
