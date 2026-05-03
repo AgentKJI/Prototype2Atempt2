@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] StairInteract stairInteract;
     [SerializeField] NPC npc;
     [SerializeField] NPC npc2;
+    [SerializeField] GameObject journalUI;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,6 +22,12 @@ public class PlayerController : MonoBehaviour
     {
         
     }
+    public void journal(InputAction.CallbackContext ctx)
+    {
+
+        journalUI.SetActive(!journalUI.activeSelf);
+    }
+
 
     public void interact(InputAction.CallbackContext ctx)
     {

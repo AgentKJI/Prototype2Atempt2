@@ -4,16 +4,21 @@ using UnityEngine.VFX;
 public class GunScript : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
-    public bool canShoot = true;
+    public bool canShoot;
     public void Shoot(InputAction.CallbackContext ctx)
     {
         if (ctx.performed)
+        {
+            if (canShoot)
             {
-                if (canShoot)
-                {
-                    Instantiate(bulletPrefab, transform.position, transform.rotation);
-                }
-                else return;
+                Instantiate(bulletPrefab, transform.position, transform.rotation);
             }
+            else return;
+        }
+    }
+
+    public void shootForCinematic()
+    {
+        Instantiate(bulletPrefab, transform.position, transform.rotation);
     }
 }

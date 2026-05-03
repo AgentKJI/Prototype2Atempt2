@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] Vector3 playerVelocity;
     [SerializeField] bool isGrounded;
+    [SerializeField] bool canMove;
 
     // Start is called before the first frame update
     void Start()
@@ -57,20 +58,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if (GameStarted)
         {
-            if (ctx.performed)
+            if (canMove)
             {
-                Vector2 inputVector = ctx.ReadValue<Vector2>();
-                Debug.Log("Input Vector: " + inputVector);
-                moveInput = new Vector3(inputVector.x, 0, inputVector.y);
-                IsMoving = true;
-                //Debug.Log("IsMoving: " + IsMoving);
+                if (ctx.performed)
+                {
+                    Vector2 inputVector = ctx.ReadValue<Vector2>();
+                    Debug.Log("Input Vector: " + inputVector);
+                    moveInput = new Vector3(inputVector.x, 0, inputVector.y);
+                    IsMoving = true;
+                    //Debug.Log("IsMoving: " + IsMoving);
 
 
 
-            }
-            if (ctx.canceled)
-            {
-                IsMoving = false;
+                }
+                if (ctx.canceled)
+                {
+                    IsMoving = false;
+                }
             }
         }
 
