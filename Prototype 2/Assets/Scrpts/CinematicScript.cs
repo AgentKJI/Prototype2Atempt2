@@ -39,8 +39,9 @@ public class CinematicScript : MonoBehaviour
                     currentLineIndex++;
                     yield return new WaitForSeconds(timeBetweenLines);
                 }
-    
-            player.GetComponent<PlayerController>().enabled = true;
+        Application.LoadLevel("Challenge3");
+
+        player.GetComponent<PlayerController>().enabled = true;
         }
 
 }
