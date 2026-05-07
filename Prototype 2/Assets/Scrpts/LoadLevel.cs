@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class LoadLevel : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
-            Application.LoadLevel(levelName);
+            SceneManager.LoadScene("Challenge2");
+
         }
     }
 }

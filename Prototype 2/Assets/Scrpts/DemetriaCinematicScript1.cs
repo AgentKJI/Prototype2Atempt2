@@ -1,6 +1,7 @@
-using UnityEngine;
-using TMPro;
 using System.Collections;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 public class DemetriaCinematicScript : MonoBehaviour
 {
 
@@ -39,7 +40,8 @@ public class DemetriaCinematicScript : MonoBehaviour
                     currentLineIndex++;
                     yield return new WaitForSeconds(timeBetweenLines);
                 }
-        Application.LoadLevel("Challenge3");
+        SceneManager.LoadScene("Challenge3");
+
         player.GetComponent<PlayerController>().enabled = true;
         }
 

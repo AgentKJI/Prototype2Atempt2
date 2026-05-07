@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Challenge3.unity
     guid: 1f30369762528d34faf18e500699a01d
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 6ede37d8fdc4b0140ab5f5aa48577d65
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
