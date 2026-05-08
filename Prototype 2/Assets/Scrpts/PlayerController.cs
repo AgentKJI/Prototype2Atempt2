@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] NPC npc;
     [SerializeField] NPC npc2;
     [SerializeField] GameObject journalUI;
+    [SerializeField] GameObject pauseMenuUI;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -53,7 +54,19 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    
+    public void pauseMenu(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            pauseMenuUI.SetActive(true);
+        }
+
+    }
+
+
 
 
 }
